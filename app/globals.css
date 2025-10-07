@@ -1,26 +1,152 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Fonts */
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  /* Light mode colors - WCAG AA compliant contrast ratios */
+  --background: #f5f5f5;
+  --foreground: #09090b;
+  --card: #ffffff;
+  --card-foreground: #09090b;
+  --popover: #ffffff;
+  --popover-foreground: #09090b;
+  --primary: #2563eb;
+  --primary-foreground: #ffffff;
+  --secondary: #f4f4f5;
+  --secondary-foreground: #18181b;
+  --muted: #f4f4f5;
+  --muted-foreground: #3f3f46;
+  --accent: #f4f4f5;
+  --accent-foreground: #18181b;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --border: #e4e4e7;
+  --input: #e4e4e7;
+  --ring: #2563eb;
+}
+
+.dark {
+  /* Dark mode colors */
+  --background: #0a0a0a;
+  --foreground: #fafafa;
+  --card: #0a0a0a;
+  --card-foreground: #fafafa;
+  --popover: #0a0a0a;
+  --popover-foreground: #fafafa;
+  --primary: #fafafa;
+  --primary-foreground: #0a0a0a;
+  --secondary: #262626;
+  --secondary-foreground: #fafafa;
+  --muted: #262626;
+  --muted-foreground: #a3a3a3;
+  --accent: #262626;
+  --accent-foreground: #fafafa;
+  --destructive: #7f1d1d;
+  --destructive-foreground: #fafafa;
+  --border: #262626;
+  --input: #262626;
+  --ring: #d4d4d4;
 }
 
 @theme inline {
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+
+  /* Map CSS variables to Tailwind colors */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* Override gray colors to be opaque */
+  --color-gray-50: #fafafa;
+  --color-gray-100: #f4f4f5;
+  --color-gray-200: #e4e4e7;
+  --color-gray-300: #d4d4d8;
+  --color-gray-400: #a1a1aa;
+  --color-gray-500: #71717a;
+  --color-gray-600: #52525b;
+  --color-gray-700: #3f3f46;
+  --color-gray-800: #27272a;
+  --color-gray-900: #18181b;
+
+  --radius-sm: calc(0.5rem - 4px);
+  --radius-md: calc(0.5rem - 2px);
+  --radius-lg: 0.5rem;
 }
 
+/* Override media query dark mode - use class-based dark mode only */
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  :root:not(.dark) {
+    color-scheme: light;
   }
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  /* Text color overrides */
+  :root:not(.dark) .dark\:text-gray-300,
+  :root:not(.dark) .dark\:text-gray-400,
+  :root:not(.dark) .dark\:text-gray-100 {
+    color: inherit;
+  }
+
+  /* Background color overrides */
+  :root:not(.dark) .dark\:bg-blue-950,
+  :root:not(.dark) .dark\:bg-blue-900,
+  :root:not(.dark) .dark\:bg-green-900,
+  :root:not(.dark) .dark\:bg-purple-950,
+  :root:not(.dark) .dark\:bg-purple-900,
+  :root:not(.dark) .dark\:bg-emerald-950,
+  :root:not(.dark) .dark\:bg-emerald-900,
+  :root:not(.dark) .dark\:bg-red-900,
+  :root:not(.dark) .dark\:bg-transparent {
+    background-color: inherit;
+  }
+
+  /* Border color overrides */
+  :root:not(.dark) .dark\:border-blue-900,
+  :root:not(.dark) .dark\:border-green-900,
+  :root:not(.dark) .dark\:border-purple-900,
+  :root:not(.dark) .dark\:border-emerald-900,
+  :root:not(.dark) .dark\:border-red-900,
+  :root:not(.dark) .dark\:border-gray-700 {
+    border-color: inherit;
+  }
+
+  /* Other dark mode overrides */
+  :root:not(.dark) .dark\:text-blue-300,
+  :root:not(.dark) .dark\:text-green-300,
+  :root:not(.dark) .dark\:text-purple-300,
+  :root:not(.dark) .dark\:text-purple-400,
+  :root:not(.dark) .dark\:text-emerald-300,
+  :root:not(.dark) .dark\:text-emerald-400,
+  :root:not(.dark) .dark\:text-emerald-500,
+  :root:not(.dark) .dark\:text-amber-400,
+  :root:not(.dark) .dark\:text-red-300 {
+    color: inherit;
+  }
+
+  /* Invert overrides */
+  :root:not(.dark) .dark\:invert-0 {
+    filter: inherit;
+  }
+
+  :root:not(.dark) .dark\:invert {
+    filter: none;
+  }
 }

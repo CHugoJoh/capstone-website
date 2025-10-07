@@ -17,12 +17,12 @@ export default function AnimatedCube3D() {
 
   return (
     <div className="w-full h-[420px] md:h-[520px] my-12 flex items-center justify-center">
-      <spline-viewer
-        url="https://prod.spline.design/DlnNMurvV4Ugn-k6/scene.splinecode"
-        style={{ width: '100%', height: '100%' }}
-      />
+      {React.createElement("spline-viewer", {
+        url: "https://prod.spline.design/DlnNMurvV4Ugn-k6/scene.splinecode",
+        style: { width: "100%", height: "100%" },
+      })}
     </div>
-  )
+  );
 }
 
 

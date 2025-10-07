@@ -5,8 +5,8 @@ import AnimatedCube3DClient from "./components/AnimatedCube3DClient";
 
 export default function Home() {
   return (
-    <div className="font-sans min-h-screen p-8 pb-20 sm:p-20">
-      <main className="max-w-6xl mx-auto">
+    <div className="font-sans min-h-screen bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950">
+      <main className="max-w-5xl mx-auto px-6 py-12 sm:px-8 sm:py-16 lg:px-12">
         <Header />
         <AnimatedCube3DClient />
         <LandingPage />

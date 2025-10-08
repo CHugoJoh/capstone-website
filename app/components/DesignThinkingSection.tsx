@@ -242,7 +242,7 @@ export default function DesignThinkingSection() {
                   <div className="space-y-1">
                     <p className="font-medium text-gray-100">Reduced Emergency Response Impact</p>
                     <p className="text-sm text-gray-400 leading-relaxed">
-                      Fewer accidents = reduced emissions from emergency vehicles and medical responses
+                      Improved safety translates into fewer accident responses — decreasing fuel consumption, operational costs, and carbon output.
                     </p>
                   </div>
                 </div>

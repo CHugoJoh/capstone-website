@@ -14,49 +14,17 @@ export default function OverviewSection() {
         </p>
       </div>
 
-      {/* Video/Demo Placeholder */}
+      {/* Video Demo */}
       <Card className="mb-12 overflow-hidden border-gray-800 shadow-sm hover:shadow-md transition-shadow duration-200">
         <CardContent className="p-0">
-          <div className="relative w-full aspect-video bg-gradient-to-br from-blue-950 to-purple-950 flex items-center justify-center">
-            {/* Placeholder for video embed */}
-            <div className="text-center p-8">
-              <div className="mb-6">
-                <svg
-                  className="mx-auto h-20 w-20 text-blue-500"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={1.5}
-                    d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"
-                  />
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={1.5}
-                    d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
-              </div>
-              <p className="text-lg font-medium text-gray-300">
-                Demo Video Placeholder
-              </p>
-              <p className="text-sm text-gray-500 mt-2">
-                Insert your tutorial/presentation video here
-              </p>
-              {/* Uncomment and replace with your video embed
-              <iframe
-                className="w-full h-full"
-                src="YOUR_VIDEO_URL"
-                title="Rapportör Demo"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
-              */}
-            </div>
+          <div className="relative w-full aspect-video bg-gradient-to-br from-blue-950 to-purple-950">
+            <video
+              className="absolute inset-0 w-full h-full object-cover"
+              src="/vedio.mp4"
+              title="Rapportör Demo"
+              loop
+              controls
+            />
           </div>
         </CardContent>
       </Card>

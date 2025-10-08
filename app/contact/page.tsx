@@ -35,43 +35,63 @@ export default function Contact() {
               <div className="grid md:grid-cols-2 gap-6">
                 {/* Add your actual team members here */}
                 <div className="p-4 border border-gray-700 rounded-lg hover:border-blue-500 transition-colors">
-                  <h3 className="text-lg font-semibold mb-1 text-white">Team Member 1</h3>
-                  <p className="text-sm text-gray-400 mb-2">Role/Position</p>
+                  <h3 className="text-lg font-semibold mb-1 text-white">Theo Blennar Dussart</h3>
+                  <p className="text-sm text-gray-400 mb-2">Member</p>
                   <a
                     href="mailto:member1@chalmers.se"
                     className="text-sm text-blue-400 hover:underline"
                   >
-                    member1@chalmers.se
+                    theobl@chalmers.se
                   </a>
                 </div>
                 <div className="p-4 border border-gray-700 rounded-lg hover:border-blue-500 transition-colors">
-                  <h3 className="text-lg font-semibold mb-1 text-white">Team Member 2</h3>
-                  <p className="text-sm text-gray-400 mb-2">Role/Position</p>
+                  <h3 className="text-lg font-semibold mb-1 text-white">Emil Cederqvist</h3>
+                  <p className="text-sm text-gray-400 mb-2">Member</p>
                   <a
                     href="mailto:member2@chalmers.se"
                     className="text-sm text-blue-400 hover:underline"
                   >
-                    member2@chalmers.se
+                    emilced@chalmers.se
                   </a>
                 </div>
                 <div className="p-4 border border-gray-700 rounded-lg hover:border-blue-500 transition-colors">
-                  <h3 className="text-lg font-semibold mb-1 text-white">Team Member 3</h3>
-                  <p className="text-sm text-gray-400 mb-2">Role/Position</p>
+                  <h3 className="text-lg font-semibold mb-1 text-white">Hugo Johansson</h3>
+                  <p className="text-sm text-gray-400 mb-2">Member</p>
                   <a
                     href="mailto:member3@chalmers.se"
                     className="text-sm text-blue-400 hover:underline"
                   >
-                    member3@chalmers.se
+                    hugjoh@chalmers.se
                   </a>
                 </div>
                 <div className="p-4 border border-gray-700 rounded-lg hover:border-blue-500 transition-colors">
-                  <h3 className="text-lg font-semibold mb-1 text-white">Team Member 4</h3>
-                  <p className="text-sm text-gray-400 mb-2">Role/Position</p>
+                  <h3 className="text-lg font-semibold mb-1 text-white">William Lindgren</h3>
+                  <p className="text-sm text-gray-400 mb-2">Member</p>
                   <a
                     href="mailto:member4@chalmers.se"
                     className="text-sm text-blue-400 hover:underline"
                   >
-                    member4@chalmers.se
+                    willind@chalmers.se
+                  </a>
+                </div>
+                <div className="p-4 border border-gray-700 rounded-lg hover:border-blue-500 transition-colors">
+                  <h3 className="text-lg font-semibold mb-1 text-white">Emil Tervo</h3>
+                  <p className="text-sm text-gray-400 mb-2">Member</p>
+                  <a
+                    href="mailto:member4@chalmers.se"
+                    className="text-sm text-blue-400 hover:underline"
+                  >
+                    emilte@chalmers.se
+                  </a>
+                </div>
+                <div className="p-4 border border-gray-700 rounded-lg hover:border-blue-500 transition-colors">
+                  <h3 className="text-lg font-semibold mb-1 text-white">Jakob Wennberg</h3>
+                  <p className="text-sm text-gray-400 mb-2">Member</p>
+                  <a
+                    href="mailto:member4@chalmers.se"
+                    className="text-sm text-blue-400 hover:underline"
+                  >
+                    jakwen@chalmers.se
                   </a>
                 </div>
               </div>
